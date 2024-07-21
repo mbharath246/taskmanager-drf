@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <h1>Get Token Login</h1>
+        <form action="" method="post" id="form-data">
+            <input type="email" name="email" id="email" placeholder="Enter your email"> <br> <br>
+            <input type="password" name="password" id="password"  placeholder="Enter your password"> <br> <br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    
+    <div>
+        <h1>Get all Tasks</h1>
+        <button onclick="get_tasks()">Get Tasks</button> <br><br>
+    </div>
+    
+    <div>
+        <h1>Create Tasks</h1>
+        <form action="" method="post" id="task-form">
+            <input type="text" name="name" placeholder="Enter Task Name"> <br><br>
+            <input type="text" name="description" placeholder="Enter Task Description"> <br><br>
+            <input type="radio" name="status" value="Pending">
+            <label for="status">Pending</label> <br>
+            <input type="radio" name="status" value="Success">
+            <label for="status">Success</label> <br><br>
+            <input type="submit" value="Create Task">
+        </form>
+    </div>
+
+    <div>
+        <h1>Update Tasks</h1>
+        <form action="" method="post" id="update-task">
+            <input type="number" name="number" placeholder="Enter Update Task Name"> <br><br>
+            <input type="text" name="name" placeholder="Enter Update Task Name"> <br><br>
+            <input type="text" name="description" placeholder="Enter Update Task Description"> <br><br>
+            <input type="radio" name="status" value="Pending">
+            <label for="status">Pending</label> <br>
+            <input type="radio" name="status" value="Success">
+            <label for="status">Success</label> <br><br>
+            <input type="submit" value="Update Task">
+        </form>
+    </div>
+
+    <div>
+        <h1>Delete Tasks</h1>
+        <form action="" id="delete-form">
+            <input type="number" name="id" placeholder="Enter id for deleted task number" id="id">
+            <input type="submit" value="Delete">
+        </form>
+    </div>
+    
+    <script src="/js_client/get_tasks.js"></script>
+
+</body>
+</html>
