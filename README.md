@@ -4,6 +4,8 @@
 
 This repository contains a Django project configured for deployment on Render. It includes functionality for managing tasks and users with a RESTful API. This guide covers how to deploy the project on Render and how to ensure static files and superusers are correctly set up.
 
+**deployed url** ```https://taskmanager-drf.onrender.com/swagger/```
+
 ## Features
 
 - **Django REST Framework Integration**: RESTful API endpoints for managing tasks and users.
