@@ -1,0 +1,466 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* side nav bar */
+aside{
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    background-color: antiquewhite;
+    transition: all 0.4s ease;
+    z-index: 9999;
+}
+
+aside a{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.img img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.swipe-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.swipe-head i{
+    cursor: pointer;
+}
+
+.grid{
+    display: flex;
+    align-items: center;
+    padding-inline: 20px;
+    gap: 10px;
+    width: inherit;
+}
+.grid p{
+    font-weight: 700;
+}
+
+aside p{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.text-container{
+    box-sizing: border-box;
+}
+
+.text{
+    margin: 20px;
+
+}
+.grid .name{
+    width: 200px;
+    overflow-wrap: anywhere;
+}
+
+.text:hover{
+    background-color: rgb(152, 79, 79);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    margin-left: 22px;
+}
+
+
+/* after side nav bar active */
+
+.active{
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s ease-in;
+}
+
+.active a{
+    display: block;
+    text-align: center;
+}
+
+.active a p{
+    font-size: 10px;
+}
+
+.active .grid p{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.active .name{
+    width: 80px;
+    overflow-wrap: break-word;
+}
+
+.active .swipe-head p{
+    display: none;
+}
+
+.active .grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+aside:not(.active) ~ main{
+    left: 200px;
+    /* width: calc(100% - 200px); */
+    transition: all 0.5s ease-in-out;
+}
+
+
+/* main */
+
+/* header */
+main{
+    position: absolute;
+    top: 0;
+    left: 80px;
+    height: 100%;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+}
+
+header{
+    padding: 1rem;
+    background-color: #dadada3c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header .head{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.search{
+    display: flex;  
+    align-items: center;
+}
+
+header .search input{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+header input[type='text']{
+    width: 250px;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+header input[type='submit']{
+    padding: 5.3px 20px;
+    background-color: green;
+    flex: 1;
+    color: white;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+header .filter select{
+    padding: 5px 20px;
+    border: none;
+    background: #533d3d;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+   cursor:  pointer;
+   outline: none;
+}
+
+header .filter select option{
+    cursor: pointer;
+}
+
+/* Headings */
+
+.main-container{
+    height: 100%;
+    margin: 5px;
+}
+
+.main-container .headings{
+    display: flex;
+    list-style-type: none;
+    /* justify-content: space-around; */
+    padding: 10px 2px;
+    background-color: #6f8377;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.main-container .headings li{
+    width: 100px;
+    margin-inline: 10px;
+    text-align: center;
+}
+
+.main-container  li#desc{
+    width: 300px;
+    text-align: start;
+}
+.main-container  li#task{
+    width: 200px;
+    text-align: start;
+}
+/* main body */
+
+.delete-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    text-align: center;
+    background-color: snow;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.delete-container button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-block: 20px;
+    margin-inline: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.delete-container button#yes{
+    background-color: #008000b8;
+    color: white;
+}
+
+.delete-container button#no{
+    background-color: #ff0000b0;
+    color: white;
+}
+.delete-container button#yes:hover{
+    background-color: #026802;
+}
+.delete-container button#no:hover{
+    background-color: #bb0808b0;
+}
+
+.main-body .main-content{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin-block: 10px;
+    padding-block: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    border-radius: 5px;
+    border-left: 1px solid #009688;
+}
+
+.main-body .main-content li{
+    width: 100px;
+    margin-inline: 10px;
+    text-align: center;
+}
+
+li#date{
+    font-size: 14px;
+    width: 200px;
+}
+
+.main-body .main-content button#task-edit{
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-inline: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding-inline: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.task-container#edit-container {
+    display: none;
+}
+
+#edit-tasks h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#edit-tasks h1 p{
+    padding: 0 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#edit-tasks h1 p:hover{
+    background: #b80909;
+    color: white;
+}
+
+li#edit-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button#delete-task {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #c53838;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.main-body .main-content li#status{
+    background: #b10000;
+    color: white;
+    border-radius: 10px;
+    padding-block: 2px;
+}
+
+
+/* add Tasks */
+
+.task-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 50px;
+}
+
+.task-container form{
+    background-color: rgb(87 123 125);;
+    padding: 40px 50px;
+    color: white;
+    border-radius: 10px;
+}
+
+.task-container .task-name input{
+    width:100%;
+    height: 30px;
+    padding:10px;
+    margin-block: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+    font-weight: 600;
+}
+.task-container .task-name, .task-container .task-desc{
+    margin-block: 10px;
+}
+
+.task-container textarea{
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    font-weight: 600;
+    
+}
+
+.task-container .status{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 5px;
+}
+.task-container .status .status-type{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    border-radius: 4px;
+}
+.task-container .status .success{
+    background-color: #276427;
+}
+
+.task-container .status .pending{
+    background-color: #bc3a3ac7;
+}
+
+#radio{
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.task-container .submit input{
+    padding: 12px 40px;
+    font-size: 16px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-weight: 600;
+    background: #008000;
+    color: white;
+    font-family: monospace;
+    cursor: pointer;
+}
+.task-container .submit{
+    text-align: center;
+}
+.task-container .submit input:hover{
+    background: hsl(120deg 100% 20%);
+}
+
+
+@media (max-width: 700px){
+    main{
+        width: auto;
+    }
+
+    main header{
+        width: inherit;
+    }
+    
+}
