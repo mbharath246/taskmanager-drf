@@ -11,7 +11,7 @@ const userNameAdd = sideActive.querySelector('.grid .name p')
 const isLoggedIn = localStorage.getItem('isLoggedIn');
 
 if (!isLoggedIn){
-    window.location.href = '/task-manager/login.html'
+    window.location.href = '/frontend/login.html'
 }
 
 
@@ -308,5 +308,5 @@ function editTasksClose(){
 function logOut() {
     localStorage.removeItem('isLoggedIn')
     localStorage.removeItem('token')
-    window.location.href = '/task-manager/login.html'
+    window.location.href = '/frontend/login.html'
 }

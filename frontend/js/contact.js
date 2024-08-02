@@ -10,7 +10,7 @@ const userNameAdd = sideActive.querySelector('.grid .name p')
 
 
 if (!isLoggedIn){
-    window.location.href = '/task-manager/login.html'
+    window.location.href = '/frontend/login.html'
 }
 
 userNameAdd.innerHTML = localStorage.getItem('user')    

@@ -29,7 +29,7 @@ if (loginForm) {
                 localStorage.setItem('token',`Bearer ${data.access}`)
                 success.textContent = 'Login Successful'
                 localStorage.setItem('isLoggedIn',true)
-                window.location.href = '/task-manager/index.html'
+                window.location.href = '/frontend/index.html'
 
             } else{    
                 error.textContent = data.detail
@@ -73,7 +73,7 @@ if (loginForm) {
                 }
             } else {    
                 success.textContent = 'Registration Successful';
-                window.location.href = '/task-manager/login.html'
+                window.location.href = '/frontend/login.html'
             }})
         .catch(err => {
             console.error('Fetch error:', err);
