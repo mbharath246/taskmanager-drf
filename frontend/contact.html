@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+
+    <aside class="active">
+        <div class="swipe-head">
+            <p>Welcome...</p>
+            <i class="fa-solid fa-bars" id="side-btn"></i>
+        </div>
+
+        <div class="grid">
+            <div class="img">
+                <img src="images/bharath.png" alt="load">
+            </div>
+            <div class="name">
+                <p></p>
+                <!-- <p>Admin</p> -->
+            </div>
+        </div>
+
+        <div class="text-container">
+            <div class="text">
+                <a href="/task-manager/index.html">
+                    <i class="fa-solid fa-grip"></i>
+                    <p>Dashboard</p>
+                </a>
+            </div>
+            <!-- <div class="text">
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
+                    <p>Profile</p>
+                </a>
+            </div> -->
+            <div class="text">
+                <a href="/task-manager/add.html">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Add Tasks</p>
+                </a>
+            </div>
+            <div class="text">
+                <a href="/task-manager/contact.html">
+                    <i class="fa-brands fa-telegram"></i>
+                    <p>Contact</p>
+                </a>
+            </div>
+            <div class="text logout">
+                <a onclick="logOut()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>
+
+
+
+    </aside>
+
+    <main>
+        <!-- Header -->
+        <header>
+            <div class="head">
+                <p>Time: </p>
+                <p id="time"></p>
+            </div>
+        </header>
+        
+        <!-- Main Body -->
+        <div class="contact-container">
+            <div class="sent hidden">
+                <h1><i class="fa-regular fa-circle-check"></i> Message Sent</h1>
+                <p>Thanks for completing the form. We'll be in touch soon!</p>
+            </div>
+            <form method="post" class="form-body" novalidate>
+                <h2>Contact Us</h2>
+                <div class="name">
+                    <div class="fname">
+                        <label for="firstname">First Name <span class="star">*</span></label> <br>
+                        <input type="text" name="firstname" id="firstname">
+                        <span class="error hidden">This field is required.</span>
+                    </div>
+                    <div class="lname">
+                        <label for="lastname">last Name <span class="star">*</span></label> <br>
+                        <input type="text" name="lastname" id="lastname">
+                        <span class="error hidden">This field is required.</span>
+    
+                    </div>
+                </div>
+                <div class="email">
+                    <label for="email">Email Address <span class="star">*</span></label> <br>
+                    <input type="email" name="email" id="email">
+                    <span class="error hidden">This field is required.</span>
+                </div>
+    
+                <label for="">Query Type <span class="star">*</span></label>
+                <div class="query">
+                    <div class="query-type">
+                        <input type="radio" id="general" name="query-type">
+                        <label for="general" id="radio">General Query</label>
+                    </div>
+                    <div class="query-type">
+                        <input type="radio" id="support" name="query-type">
+                        <label for="support" id="radio">Support Request</label>
+                    </div>
+                </div>
+                <span class="error hidden q-error">Please select a query type</span>
+    
+                <div class="message">
+                    <label for="msg">Message <span class="star">*</span></label> <br>
+                    <textarea name="" id="msg" rows="4"></textarea>
+                    <span class="error hidden">This field is required.</span>
+                </div>
+                <div class="check">
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox" id="check">
+                        <label for="check"><p>I consent being contacted by the team <span class="star">*</span></p></label>
+                    </div>
+                    <span class="error hidden">To submit this form, please consent to being contacted</span>
+                </div>
+    
+                <input type="submit" value="Submit">
+            </form>
+    
+        </div>
+
+    </main>
+    
+</body>
+
+<script src="./js/contact.js"></script>
+<script src="./js/script.js"></script>
+</html>

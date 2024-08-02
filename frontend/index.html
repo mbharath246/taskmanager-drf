@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <aside class="active">
+        <div class="swipe-head">
+            <p>Welcome...</p>
+            <i class="fa-solid fa-bars" id="side-btn"></i>
+        </div>
+
+        <div class="grid">
+            <div class="img">
+                <img src="images/bharath.png" alt="load">
+            </div>
+            <div class="name">
+                <p></p>
+                <!-- <p>Admin</p> -->
+            </div>
+        </div>
+
+        <div class="text-container">
+            <div class="text">
+                <a href="/task-manager/index.html">
+                    <i class="fa-solid fa-grip"></i>
+                    <p>Dashboard</p>
+                </a>
+            </div>
+            <!-- <div class="text">
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
+                    <p>Profile</p>
+                </a>
+            </div> -->
+            <div class="text">
+                <a href="/task-manager/add.html">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Add Tasks</p>
+                </a>
+            </div>
+            <div class="text">
+                <a href="/task-manager/contact.html">
+                    <i class="fa-brands fa-telegram"></i>
+                    <p>Contact</p>
+                </a>
+            </div>
+            <div class="text logout">
+                <a onclick="logOut()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>
+
+
+
+    </aside>
+
+    <main>
+        <!-- Header -->
+        <header>
+            <div class="head">
+                <p>Time: </p>
+                <p id="time"></p>
+            </div>
+            <div class="search">
+                <input type="text" name="search" placeholder="Enter task name..." id="search-value">
+                <input type="submit" value="Search">
+            </div>
+            <div class="filter">
+                <select>
+                    <option hidden>Filter By Status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Success">Success</option>
+                    <option value="All">All</option>
+                </select>
+            </div>
+        </header>
+        
+        <!-- Main Body -->
+         <div class="main-container">
+            <ul class="headings">
+                <li>Task id</li>
+                <li id="task">Task Name</li>
+                <li id="desc">Description</li>
+                <li>Status</li>
+                <li id="date">Created at</li>
+                <li>Action</li>
+            </ul>
+            
+            <div class="delete-container">
+                <h1>Are you sure want to delete</h1>
+                <button id="yes" onclick="deleteYes()">Yes</button>
+                <button id="no" onclick="deleteNo()">No</button>
+            </div>
+
+            <div class="task-container" id="edit-container" >
+                <form action="" method="post" id="edit-tasks" >
+                    <h1 style="color: black; text-align: center; margin-bottom: 10px;">Edit Your Task
+                        <p onclick="editTasksClose()">X</p>
+                    </h1>
+                    <div class="task-name">
+                        <label>Task Name</label> <br>
+                        <input type="text" id="task-name-edit" name="name" placeholder="Enter your task name ...">
+                    </div>
+                    <div class="task-desc">
+                        <label>Description</label>
+                        <textarea rows="5" id="task-desc-edit" placeholder="Enter your task description..." name="description"></textarea>
+                    </div>
+                    <label for="">Status</label>
+                    <div class="status">
+                        <div class="status-type success">
+                            <input type="radio" id="status-success-edit" name="status" value="Success">
+                            <label for="status-success-edit" id="radio">Success</label>
+                        </div>
+                        <div class="status-type pending">
+                            <input type="radio" id="status-pending-edit" name="status" value="Pending">
+                            <label for="status-pending-edit" id="radio">Pending</label>
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Post">
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="main-body">
+            </div>
+         </div>
+
+    </main>
+    
+</body>
+
+<script src="./js/script.js"></script>
+</html>

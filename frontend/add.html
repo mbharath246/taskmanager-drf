@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <aside class="active">
+        <div class="swipe-head">
+            <p>Welcome...</p>
+            <i class="fa-solid fa-bars" id="side-btn"></i>
+        </div>
+
+        <div class="grid">
+            <div class="img">
+                <img src="images/bharath.png" alt="load">
+            </div>
+            <div class="name">
+                <p></p>
+                <!-- <p>Admin</p> -->
+            </div>
+        </div>
+
+        <div class="text-container">
+            <div class="text">
+                <a href="/task-manager/index.html">
+                    <i class="fa-solid fa-grip"></i>
+                    <p>Dashboard</p>
+                </a>
+            </div>
+            <!-- <div class="text">
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
+                    <p>Profile</p>
+                </a>
+            </div> -->
+            <div class="text">
+                <a href="/task-manager/add.html">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Add Tasks</p>
+                </a>
+            </div>
+            <div class="text">
+                <a href="/task-manager/contact.html">
+                    <i class="fa-brands fa-telegram"></i>
+                    <p>Contact</p>
+                </a>
+            </div>
+            <div class="text logout">
+                <a onclick="logOut()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>
+
+
+
+    </aside>
+
+    <main>
+        <!-- Header -->
+        <header>
+            <div class="head">
+                <p>Time: </p>
+                <p id="time"></p>
+            </div>
+        </header>
+        
+        <!-- Main Body -->
+        <div class="task-container">
+            <form action="" method="post" class="add-task">
+                <div class="task-name edit">
+                    <label>Task Name</label> <br>
+                    <input type="text" name="name" placeholder="Enter your task name ...">
+                </div>
+                <div class="task-desc edit">
+                    <label>Description</label>
+                    <textarea rows="5" placeholder="Enter your task description..." name="description"></textarea>
+                </div>
+                <label for="">Status</label>
+                <div class="status">
+                    <div class="status-type success">
+                        <input type="radio" id="success" name="status" value="Success">
+                        <label for="success" id="radio">Success</label>
+                    </div>
+                    <div class="status-type pending">
+                        <input type="radio" id="pending" name="status" value="Pending">
+                        <label for="pending" id="radio">Pending</label>
+                    </div>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Add" >
+                </div>
+            </form>
+        </div>
+
+
+    </main>
+    
+</body>
+
+<script src="./js/script.js"></script>
+</html>
