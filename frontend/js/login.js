@@ -1,4 +1,5 @@
-const url = 'https://taskmanager-drf.onrender.com'
+// const url = 'https://taskmanager-drf.onrender.com'
+const url = 'http://localhost:8000/'
 let loginForm = document.getElementById('login')
 let registerForm = document.getElementById('register')
 let error = document.querySelector('.error')
