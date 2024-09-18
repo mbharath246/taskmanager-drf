@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     setInterval(formatDate, 100)
 })
 
-baseUrl = 'https://taskmanager-drf.onrender.com/'
+// baseUrl = 'https://taskmanager-drf.onrender.com/'
+baseUrl = 'http://localhost:8000/'
 
 
 document.body.onload = function (){
@@ -278,7 +279,7 @@ if (editTaskMain){
         const taskObject = new FormData(editTaskMain)
         const taskValues = Object.fromEntries(taskObject)
         
-        let editTaskMainUrl = `${baseUrl}tasks/${editTaskValue}`
+        let editTaskMainUrl = `${baseUrl}tasks/${editTaskValue}/`
         let options = {
             method:'PUT',
             headers: {
